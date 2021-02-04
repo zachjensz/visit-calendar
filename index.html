@@ -8,15 +8,19 @@
         <title>Volunteer Visit Form</title>
     </head>
     <body>
-        <h1>Volunteer Visit Form</h1>
-        <section class="thankyou">
-            <p>Thank you for volunteering with MiCare!</p>
-            <p>
-                Please let us know when you have visited your client over the
-                past three months.
-            </p>
-        </section>
+        <header>
+            <img src="logo.svg" alt="MiCare Logo" class="logo" />
+            <section class="info">
+                <p><strong>Thank you for volunteering with MiCare!</strong></p>
+                <p>
+                    Please let us know when you have visited your client over
+                    the past three months.
+                </p>
+            </section>
+        </header>
+
         <section class="form">
+            <h1>Volunteer Visit Form</h1>
             <form id="visit-form" action="" method="POST">
                 <section id="visits">
                     <fieldset class="visit">
@@ -48,7 +52,7 @@
                     </fieldset>
                 </section>
                 <button id="add-visit">Add another visit</button>
-                <input type="submit" value="submit" />
+                <input id="submit" type="submit" value="Submit" />
             </form>
         </section>
         <template id="visit-template">
@@ -57,7 +61,9 @@
                     Date Visited
                 </label>
                 <input class="visit-date" type="date" />
-                <label class="visit-type-label" for="visit-type"></label>
+                <label class="visit-type-label" for="visit-type"
+                    >Visit Type</label
+                >
                 <select class="visit-type">
                     <option value="face">Face-to-face</option>
                     <option value="phone">Phone Call</option>

@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400;800&display=swap');
+
+:root {
+    --cLight: #dae6b6;
+    --cDark: #739600;
+    --cVisit: #ded3bd;
+    --cVisitAlt: #d1c6b1;
+
+    --maxMobile: 30rem;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Libre Frank', sans-serif;
+    font-size: 150%;
+    background-color: var(--cLight);
+    margin: 0;
+}
+.logo {
+    width: min(100%, 20rem);
+    margin: 1rem;
+}
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.info {
+    width: min(100%, var(--maxMobile));
+    background-color: var(--cDark);
+}
+.info p {
+    text-align: center;
+    padding: 0 1rem;
+}
+.form h1 {
+    text-align: center;
+    border-bottom: 2px solid var(--cDark);
+}
+.visit {
+    border-left: 0.5rem solid var(--cDark);
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+
+    background-color: var(--cVisit);
+}
+#visits > fieldset:nth-child(even) {
+    background-color: var(--cVisitAlt);
+}
+.visit > label,
+.visit > input,
+.visit > select {
+    font-size: 20px;
+    display: block;
+}
+.visit > label:focus,
+.visit > input:focus,
+.visit > select:focus {
+    font-family: 'Comic Sans';
+    /* Issue Here */
+}
+#add-visit,
+#submit {
+    background-color: var(--cDark);
+    border: none;
+    display: block;
+    height: 5rem;
+    width: 100%;
+    margin: 0.2rem;
+    font-size: 150%;
+
+    color: #fff;
+}
+#add-visit:hover,
+#submit:hover {
+    opacity: 0.8;
+    color: #000;
 }
