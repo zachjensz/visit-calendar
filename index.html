@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Volunteer Visit Form</title>
+    </head>
+    <body>
+        <h1>Volunteer Visit Form</h1>
+        <section class="thankyou">
+            <p>Thank you for volunteering with MiCare!</p>
+            <p>
+                Please let us know when you have visited your client over the
+                past three months.
+            </p>
+        </section>
+        <section class="form">
+            <form id="visit-form" action="" method="POST">
+                <section id="visits">
+                    <fieldset class="visit">
+                        <label class="visit-date-label" for="visit-date-1">
+                            Date Visited
+                        </label>
+                        <input
+                            class="visit-date"
+                            type="date"
+                            name="visit-date-1"
+                        />
+                        <label class="visit-hours-label" for="visit-hours-1">
+                            Duration of visit (hours)
+                        </label>
+                        <input
+                            class="visit-hours"
+                            type="number"
+                            value="1"
+                            name="visit-hours-1"
+                        />
+                    </fieldset>
+                </section>
+                <button id="add-visit">Add another visit</button>
+                <input type="submit" value="submit" />
+            </form>
+        </section>
+        <template id="visit-template">
+            <fieldset class="visit">
+                <label class="visit-date-label" for="visit-date-1">
+                    Date Visited
+                </label>
+                <input class="visit-date" type="date" />
+                <label class="visit-hours-label" for="visit-hours-1">
+                    Duration of visit (hours)
+                </label>
+                <input class="visit-hours" type="number" value="1" />
+            </fieldset>
+        </template>
+    </body>
+</html>
