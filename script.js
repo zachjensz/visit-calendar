@@ -8,16 +8,23 @@ addVisitButton.addEventListener('click', (e) => {
     const visit = visitTemplate.content.cloneNode(true)
     visit
         .querySelector('.visit-date-label')
-        .setAttribute('for', `visit-date-${visitNumber}`)
+        .setAttribute('for', `visit-date ${visitNumber}`)
     visit
         .querySelector('.visit-date')
-        .setAttribute('name', `visit-date-${visitNumber}`)
+        .setAttribute('name', `visit-date ${visitNumber}`)
+    visit
+        .querySelector('.visit-type-label')
+        .setAttribute('name', `visit-type ${visitNumber}`)
+    visit
+        .querySelector('.visit-type')
+        .setAttribute('name', `visit-type ${visitNumber}`)
     visit
         .querySelector('.visit-hours-label')
-        .setAttribute('for', `visit-hours-${visitNumber}`)
+        .setAttribute('for', `visit-hours ${visitNumber}`)
     visit
         .querySelector('.visit-hours')
-        .setAttribute('name', `visit-hours-${visitNumber}`)
+        .setAttribute('name', `visit-hours ${visitNumber}`)
+
     visits.append(visit)
     visitNumber++
 })

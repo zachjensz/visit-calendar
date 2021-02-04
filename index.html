@@ -20,22 +20,30 @@
             <form id="visit-form" action="" method="POST">
                 <section id="visits">
                     <fieldset class="visit">
-                        <label class="visit-date-label" for="visit-date-1">
+                        <label class="visit-date-label" for="visit-date 1">
                             Date Visited
                         </label>
                         <input
                             class="visit-date"
                             type="date"
-                            name="visit-date-1"
+                            name="visit-date 1"
                         />
-                        <label class="visit-hours-label" for="visit-hours-1">
+                        <label class="visit-type-label" for="visit-type 1"
+                            >Visit type:</label
+                        >
+                        <select class="visit-type" name="visit-type 1">
+                            <option value="face">Face-to-face</option>
+                            <option value="phone">Phone Call</option>
+                            <option value="card">Card</option>
+                        </select>
+                        <label class="visit-hours-label" for="visit-hours 1">
                             Duration of visit (hours)
                         </label>
                         <input
                             class="visit-hours"
                             type="number"
                             value="1"
-                            name="visit-hours-1"
+                            name="visit-hours 1"
                         />
                     </fieldset>
                 </section>
@@ -49,7 +57,13 @@
                     Date Visited
                 </label>
                 <input class="visit-date" type="date" />
-                <label class="visit-hours-label" for="visit-hours-1">
+                <label class="visit-type-label" for="visit-type"></label>
+                <select class="visit-type">
+                    <option value="face">Face-to-face</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="card">Card</option>
+                </select>
+                <label class="visit-hours-label">
                     Duration of visit (hours)
                 </label>
                 <input class="visit-hours" type="number" value="1" />
