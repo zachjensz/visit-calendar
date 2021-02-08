@@ -36,16 +36,16 @@
                 <section id="visits">
                     <fieldset class="visit">
                         <label class="visit-date-label" for="visit-date 1">
-                            Visit Date
+                            Visit Date:
                         </label>
                         <input
                             class="visit-date"
                             type="date"
                             name="visit-date 1"
                         />
-                        <label class="visit-type-label" for="visit-type 1"
-                            >Visit type:</label
-                        >
+                        <label class="visit-type-label" for="visit-type 1">
+                            Visit type:
+                        </label>
                         <select class="visit-type" name="visit-type 1">
                             <option value="face">Face-to-face</option>
                             <option value="phone">Phone Call</option>
@@ -61,13 +61,16 @@
                             >
                         </select>
                         <label class="visit-hours-label" for="visit-hours 1">
-                            Visit Length in Hours (Rounded to 30min)
+                            Visit Length in Hours (Rounded to 30min):
                         </label>
                         <input
                             class="visit-hours"
                             type="number"
                             value="1"
                             name="visit-hours 1"
+                            step="0.5"
+                            min="0"
+                            max="24"
                         />
                     </fieldset>
                 </section>
@@ -78,12 +81,12 @@
         <template id="visit-template">
             <fieldset class="visit">
                 <label class="visit-date-label" for="visit-date-1">
-                    Visit Date
+                    Visit Date:
                 </label>
                 <input class="visit-date" type="date" />
-                <label class="visit-type-label" for="visit-type"
-                    >Visit Type</label
-                >
+                <label class="visit-type-label" for="visit-type">
+                    Visit Type:
+                </label>
                 <select class="visit-type">
                     <option value="face">Face-to-face</option>
                     <option value="phone">Phone Call</option>
@@ -93,8 +96,17 @@
                     <option value="family">Contacted their family</option>
                     <option value="other">Other</option>
                 </select>
-                <label class="visit-hours-label"> Visit Length (Hours) </label>
-                <input class="visit-hours" type="number" value="1" />
+                <label class="visit-hours-label">
+                    Visit Length in Hours (Rounded to 30min):
+                </label>
+                <input
+                    class="visit-hours"
+                    type="number"
+                    value="1"
+                    step="0.5"
+                    min="0"
+                    max="24"
+                />
             </fieldset>
         </template>
     </body>

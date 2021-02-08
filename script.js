@@ -1,3 +1,4 @@
+// Add visit
 const addVisitButton = document.querySelector('#add-visit')
 const visits = document.querySelector('#visits')
 const visitTemplate = document.querySelector('#visit-template')
