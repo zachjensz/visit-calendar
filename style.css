@@ -40,7 +40,20 @@ main {
     width: 100%;
     overflow: auto;
 }
-#visits {
+label,
+input,
+select {
+    width: 100%;
+    font-size: 2rem;
+    margin: 0.2rem;
+}
+label:focus,
+input:focus,
+select:focus {
+    border: 2px solid green;
+    outline: transparent;
+}
+.visit-form {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -48,29 +61,20 @@ main {
 #visits > fieldset:nth-child(even) {
     background-color: var(--cDarkSecondary);
 }
-.visit {
+.visit,
+.info {
     border: none;
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
     outline: transparent;
-    width: 95%;
+    width: 100%;
 
     background-color: var(--cLightSecondary);
 }
-
-.visit > label,
-.visit > input,
-.visit > select {
-    width: 100%;
-    font-size: 2rem;
-    margin: 0.2rem;
-}
-.visit > label:focus,
-.visit > input:focus,
-.visit > select:focus {
-    border: 2px solid green;
-    outline: transparent;
+.info {
+    background-color: var(--cDarkPrimary);
+    color: var(--cLight);
 }
 #add-visit,
 #submit {
