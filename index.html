@@ -10,22 +10,19 @@
     <body>
         <header>
             <img src="logo.svg" alt="MiCare Logo" class="logo" />
-            <section class="info">
-                <p><strong>Thank you for volunteering with MiCare!</strong></p>
-                <p>
-                    Please let us know when you have visited your client over
-                    the past three months.
-                </p>
-            </section>
+            <h2>Thank you for volunteering!</h2>
+            <p>
+                Please let us know when you have visited your client over the
+                <strong>past three months</strong>.
+            </p>
         </header>
 
-        <section class="form">
-            <h1>Volunteer Visit Form</h1>
+        <main class="form">
             <form id="visit-form" action="" method="POST">
                 <section id="visits">
                     <fieldset class="visit">
                         <label class="visit-date-label" for="visit-date 1">
-                            Date Visited
+                            Visit Date
                         </label>
                         <input
                             class="visit-date"
@@ -41,7 +38,7 @@
                             <option value="card">Card</option>
                         </select>
                         <label class="visit-hours-label" for="visit-hours 1">
-                            Duration of visit (hours)
+                            Visit Length (Hours)
                         </label>
                         <input
                             class="visit-hours"
@@ -54,11 +51,11 @@
                 <button id="add-visit">Add another visit</button>
                 <input id="submit" type="submit" value="Submit" />
             </form>
-        </section>
+        </main>
         <template id="visit-template">
             <fieldset class="visit">
                 <label class="visit-date-label" for="visit-date-1">
-                    Date Visited
+                    Visit Date
                 </label>
                 <input class="visit-date" type="date" />
                 <label class="visit-type-label" for="visit-type"
@@ -69,9 +66,7 @@
                     <option value="phone">Phone Call</option>
                     <option value="card">Card</option>
                 </select>
-                <label class="visit-hours-label">
-                    Duration of visit (hours)
-                </label>
+                <label class="visit-hours-label"> Visit Length (Hours) </label>
                 <input class="visit-hours" type="number" value="1" />
             </fieldset>
         </template>

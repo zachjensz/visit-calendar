@@ -1,58 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 :root {
-    --cLight: #dae6b6;
-    --cDark: #739600;
-    --cVisit: #ded3bd;
-    --cVisitAlt: #d1c6b1;
+    --cLight: #fafafa;
+    --cLightPrimary: #dae6b6;
+    --cDarkPrimary: #739600;
+    --cLightSecondary: #ded3bd;
+    --cDarkSecondary: #d1c6b1;
+    --cDark: #111;
 
     --maxMobile: 30rem;
 }
 body {
-    font-family: 'Libre Frank', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 150%;
     background-color: var(--cLight);
     margin: 0;
-}
-.logo {
-    width: min(100%, 20rem);
-    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+
+    flex-flow: column nowrap;
 }
 header {
+    background-color: var(--cLightPrimary);
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+header * {
+    width: min(100%, 30rem);
+    text-align: center;
+}
+main {
+    background-color: var(--cLightPrimary);
+    box-sizing: border-box;
+    padding: 8rem 0;
+    width: 100%;
+    overflow: auto;
+}
+#visits {
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
 }
-.info {
-    width: min(100%, var(--maxMobile));
-    background-color: var(--cDark);
-}
-.info p {
-    text-align: center;
-    padding: 0 1rem;
-}
-.form h1 {
-    text-align: center;
-    border-bottom: 2px solid var(--cDark);
+#visits > fieldset:nth-child(even) {
+    background-color: var(--cDarkSecondary);
 }
 .visit {
-    border-left: 0.5rem solid var(--cDark);
     border: none;
     display: flex;
     flex-flow: column nowrap;
-
-    border: 2px solid white;
+    box-sizing: border-box;
     outline: transparent;
-    background-color: var(--cVisit);
+    width: 95%;
+
+    background-color: var(--cLightSecondary);
 }
-#visits > fieldset:nth-child(even) {
-    background-color: var(--cVisitAlt);
-}
+
 .visit > label,
 .visit > input,
 .visit > select {
-    font-size: 20px;
+    width: 100%;
+    font-size: 2rem;
+    margin: 0.2rem;
 }
 .visit > label:focus,
 .visit > input:focus,
@@ -62,18 +74,33 @@ header {
 }
 #add-visit,
 #submit {
-    background-color: var(--cDark);
+    background-color: var(--cDarkPrimary);
     border: none;
     display: block;
-    height: 5rem;
+    min-height: 5rem;
     width: 100%;
-    margin: 0.2rem;
+    margin: 0.8rem 0;
     font-size: 150%;
 
     color: #fff;
 }
 #add-visit:hover,
 #submit:hover {
-    opacity: 0.8;
     color: #000;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 60rem) {
+    body {
+        flex-flow: row nowrap;
+    }
+    header {
+        height: 100vh;
+        width: min(max(45vw, 30rem), 50vw);
+    }
+    main {
+        height: 100vh;
+        width: min(max(45vw, 30rem), 50vw);
+    }
 }
