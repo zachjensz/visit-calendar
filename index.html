@@ -49,10 +49,19 @@
                         <select class="visit-type" name="visit-type 1">
                             <option value="face">Face-to-face</option>
                             <option value="phone">Phone Call</option>
-                            <option value="card">Card</option>
+                            <option value="text">Text Message</option>
+                            <option value="card">Card/Letter</option>
+                            <option value="aged-care">
+                                Contacted their aged care
+                            </option>
+                            <option value="family">
+                                Contacted their family
+                            </option>
+                            <option value="other">Other</option>
+                            >
                         </select>
                         <label class="visit-hours-label" for="visit-hours 1">
-                            Visit Length (Hours)
+                            Visit Length in Hours (Rounded to 30min)
                         </label>
                         <input
                             class="visit-hours"
@@ -78,7 +87,11 @@
                 <select class="visit-type">
                     <option value="face">Face-to-face</option>
                     <option value="phone">Phone Call</option>
-                    <option value="card">Card</option>
+                    <option value="text">Text Message</option>
+                    <option value="card">Card/Letter</option>
+                    <option value="aged-care">Contacted their aged care</option>
+                    <option value="family">Contacted their family</option>
+                    <option value="other">Other</option>
                 </select>
                 <label class="visit-hours-label"> Visit Length (Hours) </label>
                 <input class="visit-hours" type="number" value="1" />
