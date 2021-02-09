@@ -26,23 +26,19 @@ addVisitButton.addEventListener('click', (e) => {
         .querySelector('.visit-hours')
         .setAttribute('name', `visit-hours-${visitNumber}`)
     visits.append(visit)
-
     document
         .querySelector(`[name=visit-hours-${visitNumber}]`)
         .addEventListener('input', addTotalHours)
-
     visitNumber++
 })
 
 // Add total hours
 function addTotalHours() {
     let visitHoursFields = document.querySelectorAll('[name*=visit-hours]')
-    console.log('visitHoursFields: ', visitHoursFields)
     let totalHours = 0
     visitHoursFields.forEach((visit) => {
         totalHours += Number(visit.value)
     })
-    console.log('totalHours', totalHours)
     /*
     console.log(visitHours)
     let totalHours = visitHours.reduce((acc, cur) => {
