@@ -35,16 +35,13 @@ addVisitButton.addEventListener('click', (e) => {
 // Add total hours
 function addTotalHours() {
     let visitHoursFields = document.querySelectorAll('[name*=visit-hours]')
+    // Add up total hours
     let totalHours = 0
     visitHoursFields.forEach((visit) => {
         totalHours += Number(visit.value)
     })
-    /*
-    console.log(visitHours)
-    let totalHours = visitHours.reduce((acc, cur) => {
-        return (acc += cur.value)
-    }, 0)
-    */
+    // Round to nearest half-hour
+    totalHours = 0.5 * Math.ceil(totalHours * 2)
     document.querySelector('#total-hours').innerText = totalHours
 }
 
