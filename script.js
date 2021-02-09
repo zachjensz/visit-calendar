@@ -42,7 +42,7 @@ function addTotalHours() {
     })
     // Round to nearest half-hour
     totalHours = 0.5 * Math.ceil(totalHours * 2)
-    document.querySelector('#total-hours').innerText = totalHours
+    document.querySelector('#total-hours').innerText = totalHours.toFixed(1)
 }
 
 // Add event listener to first visit
