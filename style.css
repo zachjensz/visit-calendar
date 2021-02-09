@@ -36,14 +36,14 @@ header * {
 main {
     background-color: var(--cLightPrimary);
     box-sizing: border-box;
-    padding: 8rem 0;
+    padding: 2rem 0;
     width: 100%;
     overflow: auto;
 }
 label,
 input,
 select {
-    width: 100%;
+    width: 99%;
     font-size: 2rem;
     margin: 0.2rem;
 }
@@ -52,6 +52,9 @@ input:focus,
 select:focus {
     border: 2px solid green;
     outline: transparent;
+}
+.hours * {
+    display: inline;
 }
 .visit-form {
     display: flex;
@@ -68,7 +71,7 @@ select:focus {
     flex-flow: column nowrap;
     box-sizing: border-box;
     outline: transparent;
-    width: 100%;
+    width: 99%;
 
     background-color: var(--cLightSecondary);
 }
@@ -76,13 +79,24 @@ select:focus {
     background-color: var(--cDarkPrimary);
     color: var(--cLight);
 }
+.hours {
+    background-color: var(--cDarkSecondary);
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    display: block;
+    width: 99%;
+    margin: 0.2rem 0;
+    font-size: 150%;
+    color: var(--cDark);
+}
 #add-visit,
 #submit {
     background-color: var(--cDarkPrimary);
     border: none;
     display: block;
     min-height: 5rem;
-    width: 100%;
+    width: 99%;
     margin: 0.8rem 0;
     font-size: 150%;
 
