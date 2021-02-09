@@ -56,6 +56,9 @@ select:focus {
 .hours * {
     display: inline;
 }
+.hours-info {
+    opacity: 0.4;
+}
 .visit-form {
     display: flex;
     flex-flow: column nowrap;
